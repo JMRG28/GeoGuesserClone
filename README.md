@@ -1,1 +1,1 @@
-##GeoGuesser Clone using JavaScript
+### GeoGuesser Clone using JavaScript
