@@ -1,0 +1,171 @@
+html,
+body {
+    height: 100%;
+    margin: 10px;
+}
+
+#map,
+#pano {
+    height: 80%;
+    width: 49%;
+    border-radius: 3%;
+    z-index: 0;
+}
+
+#map {
+    float: right;
+}
+
+#pano {
+    float: left;
+}
+
+#chkButton {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15%;
+}
+
+.box {
+    line-height: 40px;
+    text-align: center;
+    /* Same as height  */
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    color: #FFD700;
+    font-size: 32px;
+}
+
+#map .centerMarker {
+    position: absolute;
+    /*url of the marker*/
+    background: url(http://maps.gstatic.com/mapfiles/markers2/marker.png) no-repeat;
+    /*center the marker*/
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    /*fix offset when needed*/
+    margin-left: -10px;
+    margin-top: -34px;
+    /*size of the image*/
+    height: 34px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#pano .lds-dual-ring {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 99;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+#progressbar {
+    height: 40px;
+    border-radius: 5%;
+}
+
+#pano .lds-dual-ring:after {
+    z-index: 99;
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    text-align: center;
+    line-height: 59px;
+    padding: 0 64px;
+    margin: 0;
+}
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.time {
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    line-height: 40px;
+    color: #FFD700;
+    font-size: 32px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+.btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    float: left;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 17px 60px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #52a127;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GeoGuesser Clone</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.1.224/styles/kendo.default-v2.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.224/js/kendo.all.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="pano"></div>
+    <div id="map"></div>
+    <button class="btn" id='chkButton' onclick="check()"></button>
+
+    <p class="box">
+        <span class="time" id="display">00:00:00</span><span> &nbsp </span>
+        <span id="distance">_ _ _ _ km </span><span> &nbsp </span>
+        <span id="progressbar"></span>
+    </p>
+
+
+
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAljhd4uRUx2akM4WI2eYfHYBbcpk-yEyI&callback=initialize&libraries=&v=weekly" async></script>
+</body>
+
+</html>
